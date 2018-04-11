@@ -49,15 +49,15 @@ router.post('/', (req, res) => {
 ///add a new fruit
 	const newPokemon = {
 		name: req.body.name,
-		color: req.body.color,
-		readyToEat: req.body.readyToEat == "on" ? true : false
+		type: req.body.type,
+		img: req.body.img
 	
 	}
 	// if(req.body.readyToEat == "on"){
 	// 	newFruit.readyToEat === true;
 
 	// }else newFruit.readyToEat = false;
-	Pokemon.push(newFruit)
+	Pokemon.push(newPokemon)
 	//redirect
 	res.redirect('/pokemon')
 

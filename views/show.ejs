@@ -9,8 +9,23 @@
 <h1>"Gotta Catch 'Em All"</h1>
 	
 	<h2><%= pokemon.name%></h2><br>
+
 	<img src="<%=pokemon.img%>">
+
 	<a href="/pokemon">Back</a>
-		
+
+	<h3>Types</h3>
+	<% for(let i = 0; i < pokemon.type.length; i++) {%>
+	<li>
+		<%= pokemon.type[i]%>
+
+	</li><% } %>	
+	<h4>Stats</h4>
+	<li>
+		Attack: <%= pokemon.stats.attack%></li>
+		<li> Defense: <%= pokemon.stats.defense%></li>
+		<li>Speed: <%= pokemon.stats.speed%>
+	</li>
+	
 </body>
 </html>

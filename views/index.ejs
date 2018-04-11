@@ -6,12 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h1>Pokemon Show Page</h1>
+	<h1>Pokemon Index Page</h1>
 	<p><a href="/pokemon/new">Add A pokemon</a></p>
 	<ul>
 	<% for(let i = 0; i < pokemon.length; i++) {%>
 	
 	<li>
+		<a href="/pokemon/<%=i%>"><%= pokemon[i].name%></a>
 	<a href="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a>
 
 
