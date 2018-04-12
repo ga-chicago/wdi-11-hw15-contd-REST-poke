@@ -6,10 +6,21 @@ const router = express.Router();
 const Pokemon = require('../models/pokemon');
 
 class PokemonC {
-	constructor(name,color,readyToEat) {
-		this.name = name;
-		this.color = color;
-		this.readyToEat = readyToEat;
+	constructor(props) {
+		this.id = props.id;
+		this.name = props.name;
+		this.img = props.img;
+		this.type = props.type;
+		this.misc = {
+			height: props.height,
+			weight: props.weight,
+			classification: props.classification
+		}
+		this.stats = {
+      		hp: props.hp,
+      		attack: props.attack,
+      		defense: props.defense,
+  		}	
 	}
 }
 
@@ -25,14 +36,8 @@ router.get('/new',(req,res) => {
 })
 
 router.post('/',(req,res) => {
-	let readyToEat = false;
-	if (req.body.readyToEat === "on") {
-		readyToEat = true;
-	}
-
-	Pokemon.push(new PokemonC(req.body.name,req.body.color,readyToEat));
+	Pokemon.push(new PokemonC(req.body));
 	
-	//You can redirect the user
 	res.redirect("/pokemon");
 	
 })
@@ -48,9 +53,6 @@ router.get('/:id/edit',(req,res) => {
 //Show route - show all info about one particular pokemon
 router.get('/:id',(req,res) => {
 
-	//You "render" templates where you previously just sent data
-	//the data you want to display in your template is the second parameter
-	//your data will always be an object
 	res.render('show.ejs',{
 			pokemon: Pokemon[req.params.id]
 		}
@@ -64,12 +66,6 @@ router.delete('/:id',(req,res) => {
 
 router.put('/:id',(req,res) => {
 	let pokemon = req.body;
-	if (pokemon.readyToEat === "on") {
-		pokemon.readyToEat = true;
-	}
-	else {
-		pokemon.readyToEat = false;
-	}
 	Pokemon[req.params.id] = pokemon;
 	res.redirect('/pokemon');
 })

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+	
+</head>
+<body>
+	<h1><%= pokemon.name %></h1>
+	<div class="container">
+		<div>
+			<img src=<%= pokemon.img %> />
+			<p>No. <%= pokemon.id %></p>
+		</div>
+		<div>
+			<div class = "classification">
+				<%= pokemon.misc.classification %>
+			</div>
+			<div class = "types">
+				<% for (let i = 0; i < pokemon.type.length; i++) { %>
+					<div class="type">
+						<%= pokemon.type[i] %>
+					</div>
+				<% } %>
+			</div>
+			<div>
+				HT: <%= pokemon.misc.height %><br>
+				WT: <%= pokemon.misc.weight %><br>
+				HP: <%= pokemon.stats.hp %><br>
+				Attack: <%= pokemon.stats.attack %><br>
+				Defense: <%= pokemon.stats.defense %>
+			</div>
+		</div>
+	<p><a href=<%= "/pokemon" %>>Back</a></p>
+</body>
+</html>
