@@ -7,18 +7,23 @@
     <title></title>
   </head>
   <body>
+
     <h1> Welcome to the Pokedex! </h1>
-    <h4> <a href="/pokemon/new">Add a Pokedex entry!</a>
-        <ul>
+      <a href="/pokemon/">Home</a>
+      <h4 class = "#newEntry"> <a href="/pokemon/new">Add a Pokedex entry!</a> </h4>
+
+    <div class= "container">
+        <div class= "entries">
+
           <% for (let i = 0; i < pokemon.length; i++) { %>
-            <li>
               <a href= "/pokemon/<%= i %>">
                 <img src="<%=pokemon[i].img %>">
               </a>
-            </li>
           <% } %>
-        </ul>
 
+          </div>
+
+      </div>
 
   </body>
 </html>

@@ -7,7 +7,9 @@ const Pokemon = require('../models/pokemon')
 
 //HOME route
 router.get('/', (req, res) => {
-  res.send("Welcome to the Pokemon App!")
+  res.render('pokemon/home.ejs', {
+    pokemon: Pokemon
+  })
 });
 
 //INDEX route
@@ -26,7 +28,7 @@ router.get('/new', (req, res) => {
 });
 
 
-//PUT route// to put edit page up
+//EDIT-GET route// to put edit page up
 router.get('/:index/edit', (req, res) => {
   res.render('pokemon/edit.ejs', {
     pokemon: Pokemon[req.params.index],
@@ -40,7 +42,8 @@ router.get('/:id', (req, res) => {
     pokemon: Pokemon[req.params.id]
   })
 });
-//
+
+
 //POST route
 //no id needed, because this is a new pokemon
 router.post('/', (req, res) => {
@@ -57,7 +60,8 @@ router.post('/', (req, res) => {
   res.redirect('/pokemon/index')
 
 });
-//
+
+
 //DELETE route
 //delete using the index of data in model
 router.delete('/:id', (req, res) => {
@@ -65,22 +69,21 @@ router.delete('/:id', (req, res) => {
   res.redirect('/pokemon/index')
 })
 
-//
-//PUT route
+
+//UPDATE-PUT route
 router.put('/:id', (req, res) => {
   console.log(req.body);
-  const thePokemon = {
-    name: req.body.id.name,
-    type: req.body.id.type,
-    img: req.body.id.img
-  }
+  const thePokemon = {};
+    thePokemon.name = req.body.name,
+    thePokemon.id = req.body.id,
+    thePokemon.type = req.body.type,
+    thePokemon.stats.hp = req.body.stats.hp;
+    thePokemon.img = req.body.img;
+
   Pokemon[req.params.id] = thePokemon;
 
-  res.redirect('/pokemon');
+  res.redirect('/pokemon/index');
 })
-
-
-
 
 
 
