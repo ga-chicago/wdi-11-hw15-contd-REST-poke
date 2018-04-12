@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<h1>Pokemon Index Page</h1>
+	<p><a href="/pokemon/new">Add A pokemon</a></p>
+	<ul>
+	<% for(let i = 0; i < pokemon.length; i++) {%>
+	
+	<li>
+		<a href="/pokemon/<%=i%>"><%= pokemon[i].name%></a>
+	<a href="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a>
+
+
+
+	<form action="/pokemon/<%= i%>?_method=DELETE" method="POST"> 
+		<input type="submit" name="delete" value="delete"></form>
+		<a href="/pokemon/<%= i %>/edit">Edit Pokemon Page</a>
+	</li>
+
+	<% } %>
+	</ul>
+	
+		
+	
+	
+
+</body>
+</html>
