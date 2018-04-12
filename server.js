@@ -7,7 +7,9 @@ const PORT = 3000;
 const pokeController = require('./controllers/PokemonController');
 
 app.use(bodyParser.urlencoded({extended: false}))
+
 app.use(methodOverride('_method'))
+
 app.use(express.static('public'));
 
 app.use('/pokemon', pokeController);

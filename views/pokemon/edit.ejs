@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <h1>Edit Pokedex Entry</h1>
+
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+
+      NAME: <input type="text" name="" value="<%= pokemon.name%>"/><br/>
+      TYPE: <input type="text" name="" value="<%= pokemon.type%>"/><br/>
+
+        <br/>
+      <button type="submit">Edit!</button>
+    </form>
+  </body>
+</html>

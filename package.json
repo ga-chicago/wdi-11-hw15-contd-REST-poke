@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zoesreagan/wdi-11-hw15-contd-REST-poke#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
     "gulp": "^3.9.1",
