@@ -1,4 +1,4 @@
-onst express = require('express');
+const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -9,6 +9,7 @@ const pokeController = require('./controllers/PokemonController');
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(methodOverride('_method'))
 app.use(express.static('public'));
+
 app.use('/pokemon', pokeController);
 
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chango|VT323|Do+Hyeon" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <h1> See all the Pokemon! </h1>
+        <ul>
+          <% for (let i = 0; i < pokemon.length; i++) { %>
+            <li>
+              <a href= "/pokemon/<%= i %>">
+                <img src="<%=pokemon[i].img %>">
+              </a>
+            </li>
+          <% } %>
+        </ul>
+
+
+  </body>
+</html>
