@@ -78,11 +78,8 @@ router.put('/:id', (req,res) => {
 	console.log(req.body)
 	const thePokemon = {};
 		thePokemon.name = req.body.name;
-		thePokemon.color = req.body.color;
-			if(req.body.readyToEat == "on"){
-		theFruit.readyToEat === true;
-
-	}else thePokemon.readyToEat = false;
+		thePokemon.type = req.body.type;
+		
 	
 	Pokemon[req.params.id] = thePokemon;
 	// res.send('I got it')
