@@ -7,7 +7,10 @@
 <body>
 	<h1>Learn more about these Pokemon!</h1>
 
+<!-- 	CREATE POKEMON BUTTON
+ -->
 	<ul>
+
 	<%for (let i = 0; i < thePokemon.length; i++) {%>
 		<a href="/pokemon/<%= i %>"> <%=thePokemon[i].name%> </a>
 		<img src="<%=thePokemon[i].img%> %>" />

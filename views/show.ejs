@@ -2,13 +2,15 @@
 <html>
 <head>
 	<title>Pokemon Show Page</title>
-	<link rel="stylesheet" type="text/css" href="/style/css.style">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<h1><%= pokemon.name %> </h1>
 	<br />
 	<img src="<%=pokemon.img%>">
-	<%if (pokemon.type.length === 2) {%>
+
+<!-- 	TYPES
+ --><%if (pokemon.type.length === 2) {%>
 		<h2>Type 1: <%= pokemon.type[0] %></h2>
 		<h2>Type 2: <%= pokemon.type[1] %></h2>
 	<%} else {%>
@@ -16,11 +18,13 @@
 	<%}%>
 
 
-
-	<h2>HP: <%=pokemon.stats.hp%></h2>
+<!-- 	STATS
+ --><h2>HP: <%=pokemon.stats.hp%></h2>
 	<h2>Attack: <%=pokemon.stats.attack%></h2>
 	<h2>Defense: <%=pokemon.stats.defense%></h2>
 
+<!-- 	EDIT BUTTON
+ -->
 
 </body>
 </html>
