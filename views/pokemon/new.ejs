@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chango|VT323|Do+Hyeon" rel="stylesheet">
+    <title>Add a Pokemon</title>
+  </head>
+  <body>
+
+<!-- action is where the form needs to post
+method is the HTTP method -->
+
+    <h1>Add a new Pokedex entry!</h1>
+
+    <form action="/pokemon" method="POST" /> <br>
+    Name:<input type="text" name="name" />
+    ID:<input type="text" name="id" />
+    Type:<input type="text" name="type" />
+    Img:<input type="text" name="img" />
+    <h2>Stats:</h2><br />
+    Hit Points:<input type="text" name="img" />
+    Attack:<input type="text" name="img" />
+    Defense:<input type="text" name="img" />
+    Special Attack:<input type="text" name="img" />
+    Special Defense:<input type="text" name="img" />
+    Speed:<input type="text" name="img" />
+
+    <input type="submit" name="" value="Create new entry!" />
+    <a href="/pokemon/index">Back to Index</a>
+
+    </form>
+
+  </body>
+</html>

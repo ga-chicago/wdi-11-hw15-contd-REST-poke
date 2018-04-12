@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chango|VT323|Do+Hyeon" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+
+    <h1> Welcome to the Pokedex! </h1>
+      <a href="/pokemon/">Home</a>
+      <h4 class = "#newEntry"> <a href="/pokemon/new">Add a Pokedex entry!</a> </h4>
+
+    <div class= "container">
+        <div class= "entries">
+
+          <% for (let i = 0; i < pokemon.length; i++) { %>
+              <a href= "/pokemon/<%= i %>">
+                <img src="<%=pokemon[i].img %>">
+              </a>
+          <% } %>
+
+          </div>
+
+      </div>
+
+  </body>
+</html>

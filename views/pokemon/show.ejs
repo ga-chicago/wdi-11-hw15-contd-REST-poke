@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Pokemon ID</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|VT323|Chango" rel="stylesheet">
+  </head>
+  <body>
+
+
+
+  <h1> Gotta Catch Em' All!</h1>
+
+    <h2><%=pokemon.name %></h2><br />
+    <img src="<%=pokemon.img %>">
+    <br />
+
+    <h2>ID No.<br />
+        <%=pokemon.id %>
+      <h2>
+
+      <h3>Type:</h3>
+        <h4>
+          <%=pokemon.type[0] %><br />
+          <%=pokemon.type[1] %>
+        </h4>
+
+
+      <h3>Stats:</h3>
+        <ul>
+          <li>Hit Points:
+          <%=pokemon.stats.hp %></li><br />
+
+          <li>Attack:
+          <%=pokemon.stats.attack %></li><br />
+
+          <li>Defense:
+          <%=pokemon.stats.defense %></li><br />
+
+          <li>Special Attack:
+          <%=pokemon.stats.spattack %></li><br />
+
+          <li>Special Defense:
+          <%=pokemon.stats.spdefense %></li><br />
+
+          <li>Speed:
+          <%=pokemon.stats.speed %></li><br />
+        </ul>
+
+    <a href="/pokemon/:id/edit">Edit Pokedex Entry</a>
+    <form action="/pokemon/:id?_method=DELETE" method="POST">
+    <input type="submit" name="delete" value="Delete This Pokemon"> </form>
+
+    <a href="/pokemon/index">Back to Index</a>
+
+  </body>
+</html>

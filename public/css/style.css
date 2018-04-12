@@ -1,0 +1,83 @@
+body {
+  color: #f5d36c;
+  background-color: #6881da;
+}
+h1 {
+  font-family: 'Chango', cursive;
+  display: flex;
+  justify-content: center;
+}
+h2,
+h3,
+h4 {
+  font-family: 'Do Hyeon', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #d43621;
+}
+.entries {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.homepage {
+  background-image: url('https://gametradersusa.com/wp-content/uploads/2016/08/pokedex1.gif');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 550px;
+  width: 750px;
+}
+ul {
+  color: #f5d36c;
+  font-size: 1.5em;
+  font-family: 'VT323', monospace;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  display: flex;
+  justify-content: center;
+  color: #f5d36c;
+  font-size: 1.5em;
+  font-family: 'VT323', monospace;
+  text-decoration: none;
+}
+a:hover {
+  color: #61acb4;
+}
+img {
+  display: flex;
+  margin: 20px auto;
+  height: 200px;
+  width: 200px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  border-radius: 15px;
+}
+input,
+#newEntry {
+  display: flex;
+  margin: 20px auto;
+  background-color: #dd4c16;
+  font-family: 'VT323', monospace;
+  font-size: .75em;
+}
+form {
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+}
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'VT323', monospace;
+  color: #f5d36c;
+  font-size: 1.5em;
+}
