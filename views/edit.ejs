@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+</head>
+<body>
+	<h1>Edit Pokemon</h1>
+
+	<form action= <%= "/pokemon/" + index + "?_method=PUT" %> method="POST" accept-charset="utf-8">
+		Number: <input type="text" name="id" value=<%= pokemon.id %> /><br><br>
+		Name: <input type="text" name="name" value=<%= pokemon.name %> /><br><br>
+		Image URL: <input type="url" name="img" value=<%= pokemon.img %> /><br><br>
+		Classification: <input type="text" name="classification" value=<%= pokemon.misc.classification %> /><br><br>
+		<% for (let i = 0; i < pokemon.type.length; i++) { %>
+			Type: <input type="text" name=<%= "type" + i %> value=<%= pokemon.type[i] %> /><br><br>
+		<% } %>
+		Height: <input type="text" name="height" value=<%= pokemon.misc.height %> /><br><br>
+		Weight: <input type="text" name="weight" value=<%= pokemon.misc.weight %> /><br><br>
+		HP: <input type="text" name="hp" value=<%= pokemon.stats.hp %> /><br><br>
+		Attack: <input type="text" name="attack" value=<%= pokemon.stats.attack %> /><br><br>
+		Defense: <input type="text" name="defense" value=<%= pokemon.stats.defense %> /><br><br>
+		<br>
+		<input type="submit" name="" value="Edit Pokemon">
+	</form>
+</body>
+</html>
