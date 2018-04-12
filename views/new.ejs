@@ -7,18 +7,13 @@
 <body>
 
 	<form action="/pokemon" method="POST">
-		Name: <input type="text" name="Name" value=<%=pokemon.name%> /> <br/>
-
-		<%if (pokemon.type.length === 2) {%>
-			Type 1: <input type="text" name="Type1" value=<%=pokemon.type[0]%> /> <br/>
-			Type 2: <input type="text" name="Type2" value=<%=pokemon.type[1]%> /> <br/>
-		<%} else {%>
-			Type: <input type="text" name="Type1" value=<%=pokemon.type[0]%> /> <br/>
-		<%}%>
-
-		HP: <input type="text" name="HP" value=<%=pokemon.stats.hp%> /> <br/>
-		Attack: <input type="text" name="Attack" value=<%=pokemon.stats.attack%> /> <br/>
-		Defense: <input type="text" name="Defense" value=<%=pokemon.stats.defense%> /> <br/>
+		Name: <input type="text" name="name" /> <br/>
+		Type: <input type="text" name="type" /> <br/>
+		Type: <input type="text" name="type" /> <br/>
+		HP: <input type="text" name="hp" /> <br/>
+		Attack: <input type="text" name="attack" /> <br/>
+		Defense: <input type="text" name="defense" /> <br/>
+		<input type="submit" name="" value="Create Pokemon!" />
 	</form>
 
 
