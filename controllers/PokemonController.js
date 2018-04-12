@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
   }
 
   Pokemon.push(newPokemon);
-  res.redirect('/pokemon')
+  res.redirect('/pokemon/index')
 
 });
 //
