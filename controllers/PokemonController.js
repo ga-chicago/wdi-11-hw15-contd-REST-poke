@@ -10,7 +10,10 @@ class PokemonC {
 		this.id = props.id;
 		this.name = props.name;
 		this.img = props.img;
-		this.type = props.type;
+		this.type = [];
+		for (let i = 0; i < 2; i++) {
+			this.type.push(props["type"+i]);
+		}
 		this.misc = {
 			height: props.height,
 			weight: props.weight,
@@ -65,8 +68,10 @@ router.delete('/:id',(req,res) => {
 })
 
 router.put('/:id',(req,res) => {
-	let pokemon = req.body;
+	let pokemon = new PokemonC(req.body);
+	console.log(req.body);
 	Pokemon[req.params.id] = pokemon;
+	console.log(Pokemon[req.params.id])
 	res.redirect('/pokemon');
 })
 
