@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Pokemon ID</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|VT323|Chango" rel="stylesheet">
+  </head>
+  <body>
+
+
+
+  <h1> Gotta Catch Em' All!</h1>
+    <h2><%=pokemon.name %></h2><br />
+    <img src="<%=pokemon.img %>">
+    <br />
+
+      <h3>Type:</h3>
+        <ul>
+          <li><%=pokemon.type[0] %> <br />
+          <li><%=pokemon.type[1] %> <br />
+        </ul>
+
+      <h3>Stats:</h3>
+        <ul>
+          <li>Hit Points:
+          <%=pokemon.stats.hp %> <br />
+
+          <li>Attack:
+          <%=pokemon.stats.attack %> <br />
+
+          <li>Defense:
+          <%=pokemon.stats.defense %> <br />
+
+          <li>Special Attack:
+          <%=pokemon.stats.spattack %> <br />
+
+          <li>Special Defense:
+          <%=pokemon.stats.spdefense %> <br />
+
+          <li>Speed:
+          <%=pokemon.stats.speed %> <br />
+        </ul>
+
+
+
+  <a href="/pokemon/index">Back</a>
+
+  </body>
+</html>

@@ -33,12 +33,12 @@ router.get('/index', (req, res) => {
 //   })
 // })
 //
-// //SHOW route
-// app.get('/pokemon/:id', (req, res) => {
-//   res.render('pokemon/show.ejs', {
-//     pokemon: Pokemon[req.params.id]
-//   })
-// });
+//SHOW route
+router.get('/:id', (req, res) => {
+  res.render('pokemon/show.ejs', {
+    pokemon: Pokemon[req.params.id]
+  })
+});
 //
 // //POST route
 // //no id needed, because this is a new pokemon
