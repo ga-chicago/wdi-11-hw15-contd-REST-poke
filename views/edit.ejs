@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Edit Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+	<h1>Edit Pokemon</h1>
+
+	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+		Name: <input type="text" name="name" value=<%=pokemon.name%> /> <br/>
+
+		<%if (pokemon.type.length === 2) {%>
+			Type 1: <input type="text" name="type1" value=<%=pokemon.type[0]%> /> <br/>
+			Type 2: <input type="text" name="type2" value=<%=pokemon.type[1]%> /> <br/>
+		<%} else {%>
+			Type: <input type="text" name="type1" value=<%=pokemon.type[0]%> /> <br/>
+		<%}%>
+		
+		HP: <input type="text" name="hp" value=<%=pokemon.stats.hp%> /> <br/>
+		Attack: <input type="text" name="attack" value=<%=pokemon.stats.attack%> /> <br/>
+		Defense: <input type="text" name="defense" value=<%=pokemon.stats.defense%> /> <br/>
+		<button type="submit">Edit Pokemon</button>
+
+	</form>
+
+</body>
+</html>

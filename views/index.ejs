@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex :: The Pokemon Index</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<h1>Learn more about these Pokemon!</h1>
+
+	<p><a href="/pokemon/new">Create a Pokemon!</a></p>
+
+	<ul>
+
+	<%for (let i = 0; i < thePokemon.length; i++) {%>
+		<a href="/pokemon/<%= i %>"> <%=thePokemon[i].name%> </a>
+		<img src="<%=thePokemon[i].img%> %>" />
+		<br />
+	<%}%>
+
+	</ul>
+</body>
+</html>
