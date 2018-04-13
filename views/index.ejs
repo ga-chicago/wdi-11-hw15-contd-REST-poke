@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon App</title>
+</head>
+<body>
+	<h1><%=heading%></h1>
+	<br>
+	<a href="pokemon/new">Add New Pokemon Here...</a>
+	<br>
+	<ul>
+	<!-- Iterate Through the array and get the names of pokemon -->
+	<%for(let i = 0, len = thePokemon.length; i < len; i ++){%>
+		<li><a href="/pokemon/<%= i%>"><%= thePokemon[i].name %></a></li>
+
+		<form action='/pokemon/<%= i%>?_method=DELETE' method='POST'><input type="submit" name="delete" value='Delete'></form>
+		<br>
+		<form action='/pokemon/<%=i %>/edit' method='get'><input type="submit" name="edit" value='Edit'></form>
+		<br>
+
+	<%}%>	
+	</ul>	
+</body>
+</html>
