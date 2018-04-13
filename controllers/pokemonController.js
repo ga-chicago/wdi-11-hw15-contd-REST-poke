@@ -55,6 +55,21 @@ router.get('/:id/edit', (req, res)=>{
 	})
 })
 
+//Route to Edit Pokemon
+router.put('/:id', (req, res)=>{
+
+	pokemon[req.params.id].name = req.body.name;
+	pokemon[req.params.id].type = req.body.type;
+	pokemon[req.params.id].stats.hp = req.body.hp;
+	pokemon[req.params.id].img = req.body.img;
+
+
+	
+
+
+	res.redirect('/pokemon');
+})
+
 
 
 
