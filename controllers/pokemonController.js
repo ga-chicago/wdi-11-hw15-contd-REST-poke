@@ -17,6 +17,13 @@ router.get('/', (req, res)=>{
 });
 
 
+//Delete Route
+router.delete('/:id', (req, res)=>{
+	pokemon.splice(req.params.id, 1);
+	res.redirect('/pokemon');
+})
+
+
 
 
 
