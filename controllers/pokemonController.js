@@ -1,0 +1,51 @@
+const express = require('express');
+const router = express.Router();
+
+
+const pokemon = require('../models/pokemon');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = router;
