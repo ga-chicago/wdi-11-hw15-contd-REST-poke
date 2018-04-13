@@ -36,7 +36,7 @@ router.post('/', (req, res)=>{
 	newPokemon = {
 		name: req.body.name,
 		type: req.body.type,
-		hp: req.body.hp,
+		stats:{hp: req.body.hp},
 		img:req.body.img
 	}
 
@@ -68,6 +68,16 @@ router.put('/:id', (req, res)=>{
 
 
 	res.redirect('/pokemon');
+})
+
+
+// Route to Show page
+
+router.get('/:id', (req, res)=>{
+	res.render('show.ejs',{
+		thePoke: pokemon[req.params.id],
+		heading: 'Pokemon Details'
+	})
 })
 
 

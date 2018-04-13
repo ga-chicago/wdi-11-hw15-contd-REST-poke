@@ -11,11 +11,11 @@
 	<ul>
 	<!-- Iterate Through the array and get the names of pokemon -->
 	<%for(let i = 0, len = thePokemon.length; i < len; i ++){%>
-		<li><a href=""><%= thePokemon[i].name %></a></li>
+		<li><a href="/pokemon/<%= i%>"><%= thePokemon[i].name %></a></li>
 
-		<form action='/pokemon/<%=i%>?_method=DELETE' method='POST'><input type="submit" name="delete" value='Delete'></form>
+		<form action='/pokemon/<%= i%>?_method=DELETE' method='POST'><input type="submit" name="delete" value='Delete'></form>
 		<br>
-		<form action='/pokemon/<%=i%>/edit' method='get'><input type="submit" name="edit" value='Edit'></form>
+		<form action='/pokemon/<%=i %>/edit' method='get'><input type="submit" name="edit" value='Edit'></form>
 		<br>
 
 	<%}%>	
