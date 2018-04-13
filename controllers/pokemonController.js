@@ -24,6 +24,27 @@ router.delete('/:id', (req, res)=>{
 })
 
 
+//route to new page
+router.get('/new', (req, res)=>{
+	res.render('new.ejs', {
+		heading: 'Add A New Pokemon!'
+	});
+})
+
+//route to add pokemon
+router.post('/', (req, res)=>{
+	newPokemon = {
+		name: req.body.name,
+		type: req.body.type,
+		hp: req.body.hp,
+		img:req.body.img
+	}
+
+	pokemon.push(newPokemon);
+	res.redirect('/pokemon')
+})
+
+
 
 
 
