@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Index</title>
+</head>
+<body>
+	<h1><%=heading%></h1>
+	<br>
+	<ul>
+	<!-- Iterate Through the array and get the names of pokemon -->
+	<%for(let i = 0, len = thePokemon.length; i < len; i ++){%>
+		<li><a href=""><%= thePokemon[i].name %></a></li>
+
+		<form action='/pokemon/<%=i%>'><input type="submit" name="delete" value='delete'></form>
+
+	<%}%>	
+	</ul>	
+</body>
+</html>
