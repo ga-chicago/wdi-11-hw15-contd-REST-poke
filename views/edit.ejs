@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon App</title>
+</head>
+<body>
+	<h1><%=heading%></h1>
+	<br>
+	<form action='/pokemon/<%= index %>?_method=PUT' method="POST">
+		<input type="text" name="name" value='' placeholder="Name of Pokemon">
+		<input type="text" name="type" value='' placeholder="Type of Pokemon">
+		<input type="text" name="hp" value='' placeholder="HP of Pokemon">
+		<input type="text" name="img" value='' placeholder="Image Source of Pokemon">
+		<input type="submit" name="submit" value='Edit!'>
+	</form>
+
+</body>
+</html>

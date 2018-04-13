@@ -42,6 +42,17 @@ router.post('/', (req, res)=>{
 
 	pokemon.push(newPokemon);
 	res.redirect('/pokemon')
+})	
+
+
+//Route to edit page
+router.get('/:id/edit', (req, res)=>{
+	
+
+	res.render('edit.ejs',{
+		index: req.params.id,
+		heading: 'Edit The Pokemon...'
+	})
 })
 
 
